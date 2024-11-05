@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scopri i migliori profumi su Parfume Empire. Offerte imperdibili!">
+    <title>Parfume Empire</title>
+    <style>
+        /* Reset di base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Imposta uno sfondo elegante e un font */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f2e7fe, #ffafca);
+            color: #4b0082;
+            line-height: 1.6;
+        }
+
+        /* Striscia informativa */
+        .info-strip {
+            background-color: #f2f2f2; /* Colore grigio chiaro */
+            text-align: center;
+            padding: 5px;
+            font-size: 0.9rem;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+            z-index: 1000;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            background-color: rgba(255, 255, 255, 0.945);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Logo e icone */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: -800px;
+            gap: 15px;
+        }
+
+        .icon {
+            width: 20px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        /* Sezione bianca */
+        .white-section {
+            background-color: white;
+            padding: 5px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Sezione dei link prova */
+        .prova-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            gap: 20px;
+        }
+
+        .prova-section a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            display: flex; /* Allinea il testo e l'immagine su una singola riga */
+            align-items: center;
+            gap: 10px; /* Spaziatura tra testo e immagine */
+            transition: transform 0.2s;
+        }
+
+        .prova-section a:hover {
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+
+        /* Sezione Articoli */
+        .articles-section {
+            background-color: #fce4ec; /* Colore rosa più chiaro per il miglior contrasto */
+            color: #4b0082;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .articles-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .articles-section p {
+            font-size: 1rem;
+        }
+
+        /* Contenitore dei prodotti */
+        .products-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Stile per l'immagine del prodotto */
+        .product {
+            display: inline-block;
+            text-align: center;
+            margin: 0 15px; /* Aggiungi margine laterale */
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 30%; /* Imposta la larghezza del prodotto per farli stare in fila */
+            max-width: 300px; /* Limita la larghezza massima */
+            height: 450px; /* Imposta un'altezza fissa per ogni prodotto */
+        }
+
+        .product img {
+            width: 100%; /* Fa sì che l'immagine occupi tutta la larghezza del contenitore */
+            height: 60%; /* Imposta l'altezza dell'immagine per fare in modo che tutte le immagini abbiano la stessa dimensione */
+            object-fit: cover; /* Ritaglia l'immagine per coprire lo spazio senza distorcerla */
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .product img:hover {
+            transform: scale(1.1);
+        }
+
+        .product p {
+            margin-top: 15px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4b0082;
+        }
+
+        /* Contenitore principale */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* Titolo principale */
+        h1 {
+            font-size: 2.5rem;
+            color: #8d066b;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Stile per il logo Vinted */
+        .vinted-logo {
+            width: 20px;
+            height: auto;
+        }
+    </style>
+    <script>
+        function scrollToArticles() {
+            document.getElementById('articles').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Striscia informativa -->
+    <div class="info-strip">
+        <strong>For any info Text Us on Instagram📲</strong>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="C:\Users\chris\Downloads\Logo bianco.png" alt="Parfume Empire Logo">
+            </div>
+            <div class="icons">
+                <img src="C:\Users\chris\Downloads\cuore.png" alt="Heart Icon" class="icon" onclick="scrollToArticles()"> <!-- Aggiunto evento onclick -->
+                <img src="C:\Users\chris\Downloads\borsa.png" alt="Bag Icon" class="icon">
+            </div>
+        </div>
+    </header>
+
+    <!-- Sezione bianca -->
+    <div class="white-section">
+    </div>
+
+    <!-- Sezione grigia scura -->
+    <div class="prova-section">
+        <a href="https://www.vinted.it/member/181600015-christianbhmg" target="_blank">
+            <span>Vinted</span>
+            <img class="vinted-logo" src="C:\Users\chris\Downloads\icona vinted.png" alt="Vinted Logo">
+        </a>
+        <a href="#">Prova 2</a>
+        <a href="#">Prova 3</a>
+        <a href="#">Prova 4</a>
+        <a href="#">Prova 5</a>
+    </div>
+
+    <!-- Sezione Articoli -->
+    <div id="articles" class="articles-section">
+        <!-- Scritta sopra i prodotti -->
+        <h2>Own the Moment With</h2>
+
+        <div class="products-container">
+            <!-- Primo prodotto: Dior Sauvage Elixir -->
+            <div class="product">
+                <a href="https://www.vinted.it/member/181600015-christianbhmg" target="_blank">
+                    <img src="C:\Users\chris\Downloads\elixir dior.jpg" alt="Dior Sauvage Elixir">
+                </a>
+                <p>Dior Sauvage Elixir</p>
+            </div>
+
+            <!-- Secondo prodotto: Pure Xs -->
+            <div class="product">
+                <a href="https://www.vinted.it/member/181600015-christianbhmg" target="_blank">
+                    <img src="C:\Users\chris\Downloads\Xs.jpg" alt="Pure Xs">
+                </a>
+                <p>Pure Xs Paco Rabanne</p>
+            </div>
+
+            <!-- Terzo prodotto: Invictus-->
+            <div class="product">
+                <a href="https://www.vinted.it/member/181600015-christianbhmg" target="_blank">
+                    <img src="C:\Users\chris\Downloads\invictus.jpg" alt="Invictus">
+                </a>
+                <p>Invictus</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenitore principale -->
+    <div class="container">
+        <h1>Parfume Empire</h1>
+        <p>Non farti scappare OFFERTE sui nostri Prodotti TOP, I migliori Profumi sono da NOI!</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Parfume Empire. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+
+</html>
